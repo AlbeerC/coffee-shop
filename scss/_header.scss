@@ -1,0 +1,47 @@
+header {
+    background-color: $lightBrown;
+    color: $white;
+    padding: 1rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    @include responsive(tablet) {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        
+    }
+
+    a img {
+        width: 10rem;
+        height: auto;
+
+        @include responsive(tablet) {
+            width: 7rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        a {
+            color: $white;
+        }
+
+        li {
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                color: $darkBrown;
+            }
+        }
+    }
+}

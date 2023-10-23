@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+// Colors
+$darkBrown: #38220f;
+$middleBrown: #634832;
+$lightBrown: #967259;
+$extraLightBrown: #ece0d1;
+$black: #000000;
+$white: #ffffff;
+
+ 
+// Fonts
+$titleFont: 'Lobster', sans-serif;
+$textFont: 'Nunito', sans-serif;
+
+
+// Other
+$radius: 2rem;
+$container: 75vw;
+$containerMobile: 90vw;
+
+
+// Mixins
+@mixin Button {
+    background-color: $black;
+    color: $white;
+    font-family: $titleFont;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: transparent;
+        border: 2px solid $black;
+    }
+}
+
+$pc: 992px;
+$tablet: 768px;
+@mixin responsive ($medida) {
+    @if $medida == pc {
+        @media (max-width: $pc) {
+            @content;
+        }
+    } @else if $medida == tablet {
+        @media (max-width: $tablet) {
+            @content;
+        }
+    }
+}

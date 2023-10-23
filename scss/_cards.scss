@@ -1,0 +1,63 @@
+.cards {
+    background-color: $middleBrown;
+    padding: 5rem 0;
+
+    .cards-list {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5rem;
+        width: $container;
+        margin: 0 auto;
+
+        @media (max-width: 1300px) {
+            justify-content: center;
+        }
+
+        @include responsive(pc) {
+            justify-content: center;
+            width: $containerMobile;
+        }
+
+        .card {
+            border-radius: $radius;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 30rem;
+            height: 25rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            color: $white;
+            object-fit: cover;
+
+            @include responsive(pc) {
+                width: 100%;
+            }
+
+            h3 {
+                letter-spacing: 1px;
+                line-height: 3.5rem;
+                font-weight: 400;
+                font-size: 3rem;
+                font-family: $titleFont;
+                text-align: center;
+            }
+        }
+
+        .one {
+            background-image: url(../img/card1.png);
+        }
+
+        .two {
+            background-image: url(../img/card2.png);
+        }
+
+        .three {
+            background-image: url(../img/card3.png);
+        }
+    }
+}
