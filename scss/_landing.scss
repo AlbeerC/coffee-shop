@@ -2,7 +2,7 @@
     background-color: $darkBrown;
     padding: 5rem 0;
 
-    .card {
+    .presentation {
         width: $container;
         margin: 0 auto;
         border-radius: $radius;
@@ -43,6 +43,10 @@
 
             button {
                 @include Button;
+                
+                a {
+                    color: $white;
+                }
 
                 i {
                     padding-left: .5rem;
@@ -54,6 +58,8 @@
 
             img {
                 transition: ease all 1000ms;
+                max-width: 40rem;
+                height: 30rem;
 
                 @include responsive(pc) {
                     max-width: 30rem;
@@ -66,4 +72,28 @@
             }
         }
     }
+
+    .indicators {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: $container;
+        margin: 0 auto;
+        padding-top: 1rem;
+
+        i {
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.presentation.d-none {
+    transform: translateX(100%);
+}
+.d-none {
+    display: none !important;
+}
+i.active {
+    color: $extraLightBrown;
 }

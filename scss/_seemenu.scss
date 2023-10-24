@@ -34,6 +34,11 @@
                 width: 100%;
                 height: 100%;
                 border-radius: $radius;
+                transition: all ease 1000ms;
+
+                &:hover {
+                    filter: grayscale(100%);
+                }
             }
         }
 

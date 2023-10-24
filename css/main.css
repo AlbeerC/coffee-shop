@@ -64,7 +64,7 @@ header {
 .landing {
   background-color: #38220f;
   padding: 5rem 0; }
-  .landing .card {
+  .landing .presentation {
     width: 75vw;
     margin: 0 auto;
     border-radius: 2rem;
@@ -74,28 +74,28 @@ header {
     align-items: center;
     padding: 0 2rem; }
     @media (max-width: 992px) {
-      .landing .card {
+      .landing .presentation {
         width: 90vw;
         flex-direction: column;
         gap: 2rem; } }
-    .landing .card .left {
+    .landing .presentation .left {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       gap: 4rem; }
       @media (max-width: 992px) {
-        .landing .card .left {
+        .landing .presentation .left {
           gap: 2rem;
           align-items: center;
           text-align: center; } }
-      .landing .card .left h1 {
+      .landing .presentation .left h1 {
         font-size: 4rem;
         letter-spacing: 3px; }
-      .landing .card .left h2 {
+      .landing .presentation .left h2 {
         font-size: 3rem;
         letter-spacing: 2px; }
-      .landing .card .left button {
+      .landing .presentation .left button {
         background-color: #000000;
         color: #ffffff;
         font-family: "Lobster", sans-serif;
@@ -104,19 +104,42 @@ header {
         font-size: 1.7rem;
         cursor: pointer;
         border: none; }
-        .landing .card .left button:hover {
+        .landing .presentation .left button:hover {
           background-color: transparent;
           border: 2px solid #000000; }
-        .landing .card .left button i {
+        .landing .presentation .left button a {
+          color: #ffffff; }
+        .landing .presentation .left button i {
           padding-left: .5rem; }
-    .landing .card .right img {
-      transition: ease all 1000ms; }
+    .landing .presentation .right img {
+      transition: ease all 1000ms;
+      max-width: 40rem;
+      height: 30rem; }
       @media (max-width: 992px) {
-        .landing .card .right img {
+        .landing .presentation .right img {
           max-width: 30rem;
           max-height: 20rem; } }
-      .landing .card .right img:hover {
+      .landing .presentation .right img:hover {
         transform: scale(1.1); }
+  .landing .indicators {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 75vw;
+    margin: 0 auto;
+    padding-top: 1rem; }
+    .landing .indicators i {
+      font-size: 5rem;
+      cursor: pointer; }
+
+.presentation.d-none {
+  transform: translateX(100%); }
+
+.d-none {
+  display: none !important; }
+
+i.active {
+  color: #ece0d1; }
 
 .cards {
   background-color: #634832;
@@ -239,7 +262,10 @@ header {
     .see-menu .split .left img {
       width: 100%;
       height: 100%;
-      border-radius: 2rem; }
+      border-radius: 2rem;
+      transition: all ease 1000ms; }
+      .see-menu .split .left img:hover {
+        filter: grayscale(100%); }
     .see-menu .split .right {
       background-color: #967259;
       display: flex;
@@ -292,7 +318,10 @@ header {
     .gallery .gallery-list img {
       width: 30rem;
       height: 30rem;
-      border-radius: 2rem; }
+      border-radius: 2rem;
+      transition: ease all 500ms; }
+      .gallery .gallery-list img:hover {
+        transform: scale(1.1); }
       @media (max-width: 992px) {
         .gallery .gallery-list img {
           width: 100%;
