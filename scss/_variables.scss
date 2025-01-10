@@ -30,11 +30,10 @@ $containerMobile: 90vw;
     border-radius: 1.5rem;
     font-size: 1.7rem;
     cursor: pointer;
-    border: none;
+    border: 2px solid $black;
 
     &:hover {
         background-color: transparent;
-        border: 2px solid $black;
     }
 }
 

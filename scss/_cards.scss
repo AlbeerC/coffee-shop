@@ -7,13 +7,9 @@
         align-items: stretch;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 5rem;
+        gap: 3rem;
         width: $container;
         margin: 0 auto;
-
-        @media (max-width: 1300px) {
-            justify-content: center;
-        }
 
         @include responsive(pc) {
             justify-content: center;
@@ -25,7 +21,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 30rem;
+            width: 27rem;
             height: 25rem;
             text-align: center;
             display: flex;
@@ -39,11 +35,9 @@
             }
 
             h3 {
-                letter-spacing: 1px;
-                line-height: 3.5rem;
-                font-weight: 400;
-                font-size: 3rem;
-                font-family: $titleFont;
+                font-weight: 700;
+                font-size: 2.5rem;
+                font-family: $textFont;
                 text-align: center;
             }
         }

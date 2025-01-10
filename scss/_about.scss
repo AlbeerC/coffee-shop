@@ -9,6 +9,7 @@
         width: $container;
         margin: 0 auto;
         gap: 5rem;
+        color: $white;
 
         @include responsive(pc) {
             flex-direction: column;
@@ -45,6 +46,7 @@
 
             p {
                 font-size: 1.7rem;
+                text-align: justify;
             }
         }
 

@@ -4,96 +4,45 @@
 
     .presentation {
         width: $container;
+        color: #ffffff;
+        height: 60vh;
         margin: 0 auto;
         border-radius: $radius;
-        background-color: $extraLightBrown;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cooffe-bg.jpg");
+        background-repeat: no-repeat;
+        // Oscurecer imagen de fondo
+        background-size: cover;
+        padding: 0 5rem;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0 2rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
 
         @include responsive(pc) {
             width: $containerMobile;
-            flex-direction: column;
-            gap: 2rem;
         }
 
-        .left {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 4rem;
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 3px;
+        }
+        
+        h2 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
 
-            @include responsive(pc) {
-                gap: 2rem;
-                align-items: center;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 4rem;
-                letter-spacing: 3px;
-            }
+        button {
+            @include Button;
+            max-width: 20rem;
             
-            h2 {
-                font-size: 3rem;
-                letter-spacing: 2px;
+            a {
+                color: $white;
             }
 
-            button {
-                @include Button;
-                
-                a {
-                    color: $white;
-                }
-
-                i {
-                    padding-left: .5rem;
-                }
-            }
-        }
-
-        .right {
-
-            img {
-                transition: ease all 1000ms;
-                max-width: 40rem;
-                height: 30rem;
-
-                @include responsive(pc) {
-                    max-width: 30rem;
-                    max-height: 20rem;
-                }
-
-                &:hover {
-                    transform: scale(1.1);
-                }
+            i {
+                padding-left: .5rem;
             }
         }
     }
-
-    .indicators {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        width: $container;
-        margin: 0 auto;
-        padding-top: 1rem;
-
-        i {
-            font-size: 5rem;
-            cursor: pointer;
-        }
-    }
-}
-
-.presentation.d-none {
-    transform: translateX(100%);
-}
-.d-none {
-    display: none !important;
-}
-i.active {
-    color: $extraLightBrown;
 }

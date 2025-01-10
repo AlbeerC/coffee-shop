@@ -4,7 +4,7 @@
 
     .menu-list {
         height: auto;
-        width: 50vw;
+        width: 70vw;
         margin: 0 auto;
         background-color: $white;
 
@@ -28,24 +28,42 @@
             }
         }
 
-        .list {
-            padding: 5rem 0;
-            text-align: center;
+        .lists { 
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: space-between;
+            align-items: flex-start;         
 
-            h4 {
-                padding-bottom: 3rem;
-                font-size: 2.5rem;
-
-                @include responsive (pc) {
-                    font-size: 2rem;
-                }
+            .list {
+                padding: 2rem 5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 2rem;
+                width: 50%;
 
                 @include responsive(tablet) {
-                    font-size: 1.5rem;
+                    padding: 2rem;
                 }
 
-                @media (max-width: 480px) {
-                    font-size: 1rem;
+                h2 {
+                    border-bottom: 2px solid #e1e1e1;
+                }
+    
+                h4 {
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: $textFont;
+                    font-weight: 400;
+
+                    @include responsive(tablet) {
+                        font-size: 1.5rem;
+                    }
+    
+                    @media (max-width: 480px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }

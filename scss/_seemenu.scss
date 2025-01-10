@@ -9,6 +9,7 @@
         width: $container;
         margin: 0 auto;
         gap: 5rem;
+        color: $white;
 
         @include responsive(pc) {
             flex-direction: column;
@@ -58,9 +59,7 @@
             }
 
             p {
-                font-family: $titleFont;
                 font-size: 2rem;
-                letter-spacing: 2px
             }
 
             button {

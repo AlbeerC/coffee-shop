@@ -14,7 +14,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
         width: $container;
         margin: 0 auto;
 
@@ -24,10 +24,11 @@
         }
 
         img {
-            width: 30rem;
-            height: 30rem;
+            width: 25rem;
+            height: 25rem;
             border-radius: $radius;
             transition: ease all 500ms;
+            object-fit: cover;
 
             &:hover {
                 transform: scale(1.1);
