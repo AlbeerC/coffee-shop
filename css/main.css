@@ -252,6 +252,8 @@ header {
         border: 2px solid #000000; }
         .see-menu .split .right button:hover {
           background-color: transparent; }
+        .see-menu .split .right button a {
+          color: #ffffff; }
 
 .gallery {
   background-color: #ece0d1;
